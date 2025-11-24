@@ -33,6 +33,7 @@ export default function Home() {
             center.
           </p>
           <p>this is additional text here for testing</p>
+          <p>Hello from the code .... 24-11-2025</p>
         </div>
         <div className={styles.ctas}>
           <a
