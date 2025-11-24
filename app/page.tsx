@@ -34,6 +34,7 @@ export default function Home() {
           </p>
           <p>this is additional text here for testing</p>
           <p>Hello from the code .... 24-11-2025</p>
+          <p>Hasan Say Alsalam Alyikum</p>
         </div>
         <div className={styles.ctas}>
           <a
