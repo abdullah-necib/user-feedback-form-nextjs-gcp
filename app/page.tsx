@@ -19,7 +19,7 @@ export default function Home() {
 
   const [data, setData] = useState(null); // state to hold resolved value
   const [loading, setLoading] = useState(true); // state to track loading
-  const [error, setError] = useState(null); // state to track errors
+  const [error, setError] = useState<Error | null>(null); // state to track errors
 
   useEffect(() => {
     async function fetchData() {
@@ -29,7 +29,7 @@ export default function Home() {
         setData(json); // update state when Promise resolves
         // console.log(json);
       } catch (err) {
-        setError(err);
+        setError(err as Error);
       } finally {
         setLoading(false);
       }
