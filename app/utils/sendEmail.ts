@@ -13,7 +13,7 @@ export async function sendEmail(formData: {
   name: string;
   email: string;
   company: string;
-  satisfaction: string;
+  satisfaction: number;
   message: string;
 }) {
   const currentDate = new Date().toISOString();
@@ -31,8 +31,8 @@ export async function sendEmail(formData: {
           <p><strong>Email:</strong> ${formData.email}</p>
           <p><strong>Company:</strong> ${formData.company}</p>
           <p><strong>Satisfaction:</strong> ${"★".repeat(
-            parseInt(formData.satisfaction)
-          )}${"☆".repeat(5 - parseInt(formData.satisfaction))}</p>
+            formData.satisfaction
+          )}${"☆".repeat(5 - formData.satisfaction)}</p>
           
           <h3>Message:</h3>
           <p>${formData.message || "No message provided."}</p>

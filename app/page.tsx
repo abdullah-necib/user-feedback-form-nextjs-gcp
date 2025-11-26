@@ -8,7 +8,7 @@ export default function Home() {
     name: "",
     email: "",
     company: "",
-    satisfaction: "3",
+    satisfaction: 1,
     message: "",
   });
 
@@ -153,8 +153,27 @@ export default function Home() {
               // value={form.company}
             />
           </p>
-          <p>
+
+          <div>
             <label>Satisfaction</label>
+            <p>
+              {[1, 2, 3, 4, 5].map((num: number) => {
+                return (
+                  <span
+                    onClick={() => setForm({ ...form, satisfaction: num })}
+                    className={
+                      form.satisfaction >= num ? "star filled" : "star"
+                    }
+                    key={num}>
+                    ★
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+          {/* <p>
+            <label>Satisfaction</label>
+
             <select
               name="satisfaction"
               required
@@ -168,7 +187,7 @@ export default function Home() {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-          </p>
+          </p> */}
           <p>
             <label>Message</label>
             <textarea
