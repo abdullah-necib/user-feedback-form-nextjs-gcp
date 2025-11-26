@@ -2,7 +2,7 @@ import { sendEmail } from "@/app/utils/sendEmail";
 import uploadToGoogleBucket from "@/app/utils/uploadToGoogleBucket";
 import { NextResponse } from "next/server";
 
-export async function POST(response: Response) {
+export async function POST(response: NextResponse) {
   try {
     const data = await response.json();
     // console.log("API received data:", data);
