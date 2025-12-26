@@ -13,7 +13,7 @@
     "dotenv": "latest",
     "next": "16.0.3",
     "nodemailer": "latest",
-    "react": "19.2.0",
+    "react": "19.2.1",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
